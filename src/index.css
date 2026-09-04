@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --batik-color: 220 38 38;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Batik pattern — subtle decorative SVG used as low-opacity background accent */
+.batik-bg {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23b91c1c' stroke-width='1' opacity='0.5'%3E%3Cpath d='M40 5 L50 20 L65 15 L60 30 L75 35 L60 45 L65 60 L50 55 L40 75 L30 55 L15 60 L20 45 L5 35 L20 30 L15 15 L30 20 Z'/%3E%3Ccircle cx='40' cy='35' r='6'/%3E%3Cpath d='M40 8 L40 0 M40 62 L40 70 M8 35 L0 35 M72 35 L80 35'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+.batik-bg-dark {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='none' stroke='%23ffffff' stroke-width='1' opacity='0.4'%3E%3Cpath d='M40 5 L50 20 L65 15 L60 30 L75 35 L60 45 L65 60 L50 55 L40 75 L30 55 L15 60 L20 45 L5 35 L20 30 L15 15 L30 20 Z'/%3E%3Ccircle cx='40' cy='35' r='6'/%3E%3Cpath d='M40 8 L40 0 M40 62 L40 70 M8 35 L0 35 M72 35 L80 35'/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: repeat;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Focus ring helper */
+.focus-ring:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.15);
+  border-color: #dc2626;
+}
